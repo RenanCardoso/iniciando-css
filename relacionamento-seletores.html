@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeira página</title>
+    <style>
+        /* segue abaixo os três principais seletores css */
+
+        /* seletor de tag, não coloca hashtag # */
+        header {
+            background-color: #f00909;
+        }
+        /* seletor de id, serve pra estilizar um id, precisa colocar o hashtag, o id é único */
+        #footer {
+            background-color: green;
+        }
+        /* o seletor de classe recebe um ponto, o legal da classe é que você pode usar 
+         * em vários lugares sem ser semanticamente incorreto (ou seja, é correto).
+         * pode repetir a vontade em todo o html  
+         */
+        .logomarca {
+            background-color: blue;
+        }
+        /* 
+        #footer div .logomarca {
+            alterar a cor do texto
+            color:white; 
+        } 
+        */
+
+        /* se nao tivesse a div poderia fazer assim: 
+         * vamos imaginar que queremos só os parágrafos em branco, deve se colocar o "p" colado
+         * pois a classe logomarca está dentro da tag de parágrafo "p"
+         */
+        /* #footer p.logomarca { isso quer dizer, só as logomarca que pertencerem a um parágrafo mudaram a cor
+            color:white; 
+        } */
+        /* isso iria aplicar a cor da fonte branca para todas as classes logomarca que estiverem dentro
+         * do footer. Não importa se está dentro de outro elemento.  
+         */
+
+         /* para relacionar seletores dentro de seletores: */
+         .footer > p.logomarca { /* só vai aplicar a cor branca nas classes logomarca que forem filhos diretos da classe .footer */ 
+            color:white; 
+        }
+        /* essa ordem é a vontade, você pode especificar qualquer seletor, dentro de qualquer seletor */
+        
+
+    </style>
+</head>
+<body>
+    <!-- no html temos atributos dentros das tags -->
+    <!-- normalmente, colocamos um id pra cada seção do site -->
+    <header id="header">
+        <div>
+            <!-- podemos colocar identificação para tags, sendo assim somente ela será alterada -->
+            <!-- o nome que você der ao id será único na página -->
+            <!-- todo id que você quiser especificar, no css terá que colocar um hastag # -->
+            <div><a href="" class="logomarca">logomarca</a></div> <!-- este é o seletor de id -->
+        </div>
+    </header>
+    <main id="content">
+        <section>
+            <h1 class="logomarca">Conteúdo</h1>
+            <p>Um texto qualquer</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <section class="footer">
+            <p class="logomarca">&copy; Todos os direitos reservados.</p>
+          
+            <a class="logomarca">&copy; Todos os direitos reservados.</p>
+        </section>
+    </footer>
+</body>
+</html>

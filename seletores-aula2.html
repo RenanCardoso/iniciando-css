@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeira página</title>
+    <style>
+        /* segue abaixo os três principais seletores css */
+
+        /* seletor de tag, não coloca hashtag # */
+        header {
+            background-color: #f00909;
+        }
+        /* seletor de id, serve pra estilizar um id, precisa colocar o hashtag, o id é único */
+        #footer {
+            background-color: green;
+        }
+        /* o seletor de classe recebe um ponto, o legal da classe é que você pode usar 
+         * em vários lugares sem ser semanticamente incorreto (ou seja, é correto).
+         * pode repetir a vontade em todo o html  
+         */
+        .logomarca {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- no html temos atributos dentros das tags -->
+    <!-- normalmente, colocamos um id pra cada seção do site -->
+    <header id="header">
+        <div>
+            <!-- podemos colocar identificação para tags, sendo assim somente ela será alterada -->
+            <!-- o nome que você der ao id será único na página -->
+            <!-- todo id que você quiser especificar, no css terá que colocar um hastag # -->
+            <div><a href="" class="logomarca">logomarca</a></div> <!-- este é o seletor de id -->
+        </div>
+    </header>
+    <main id="content">
+        <section>
+            <h1 class="logomarca">Conteúdo</h1>
+            <p>Um texto qualquer</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <div>
+            <p class="logomarca">&copy; Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

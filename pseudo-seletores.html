@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeira página</title>
+    <style>
+        /* 
+         * A primeira ordenação css funciona assim, quanto mais específico for um elemento, a propriedade
+         * em questão terá prioridade sobre as anteriores. 
+         *
+         * A ordem da prioridade é: 
+         * tag 
+         * classe (que substitui a tag)
+         * id (que substitui a classe e a tag)
+
+        #header .logomarca{
+            color: blue;
+        }
+        .logomarca {
+            color: red;
+        }
+        */
+        
+        /* tag */
+        header a {
+            color: red;
+        }
+
+        /* classe */
+        .header a {
+            color: blue;
+        } 
+
+        /* id */
+        #header div div a {
+            color: green;
+        } 
+        
+        /* o resultado final será o verde, porque o id é mais específico que a classe, e a classe é 
+         * mais específico que a tag. Não importa a ordem (numero da linha) do código, ele irá preferir
+         * o id. Quanto mais específico for, melhor será para trabalhar com ele
+         */
+
+
+        /*         
+        #header div div a {
+            background-color: fuchsia;
+            color: gray;
+        }
+
+        #header div div a {
+            color: blueviolet;
+        } 
+        */
+
+        /* se você especificar um atributo, logo na sequencia com mesmo seletor ou um seletor mais específico
+         * ele vai substituir o anterior. Ele não invalida. 
+         * No exempo acima a cor blueviolet substitui a cor cinza. 
+         */
+
+    </style>
+</head>
+<body>
+    <!-- no html temos atributos dentros das tags -->
+    <!-- normalmente, colocamos um id pra cada seção do site -->
+    <header class="header" id="header">
+        <div>
+            <!-- podemos colocar identificação para tags, sendo assim somente ela será alterada -->
+            <!-- o nome que você der ao id será único na página -->
+            <!-- todo id que você quiser especificar, no css terá que colocar um hastag # -->
+            <div><a href="" class="logomarca">logomarca</a></div> <!-- este é o seletor de id -->
+        </div>
+    </header>
+    <main id="content">
+        <section>
+            <h1 class="logomarca">Conteúdo</h1>
+            <p>Um texto qualquer</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <section class="footer">
+            <p class="logomarca">&copy; Todos os direitos reservados.</p>
+        </section>
+    </footer>
+</body>
+</html>
