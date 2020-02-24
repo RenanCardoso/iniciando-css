@@ -6,59 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Primeira página</title>
     <style>
-        /* 
-         * A primeira ordenação css funciona assim, quanto mais específico for um elemento, a propriedade
-         * em questão terá prioridade sobre as anteriores. 
-         *
-         * A ordem da prioridade é: 
-         * tag 
-         * classe (que substitui a tag)
-         * id (que substitui a classe e a tag)
-
-        #header .logomarca{
-            color: blue;
-        }
-        .logomarca {
-            color: red;
-        }
-        */
-        
-        /* tag */
-        header a {
-            color: red;
-        }
-
-        /* classe */
-        .header a {
-            color: blue;
-        } 
-
-        /* id */
-        #header div div a {
-            color: green;
-        } 
-        
-        /* o resultado final será o verde, porque o id é mais específico que a classe, e a classe é 
-         * mais específico que a tag. Não importa a ordem (numero da linha) do código, ele irá preferir
-         * o id. Quanto mais específico for, melhor será para trabalhar com ele
-         */
-
-
-        /*         
-        #header div div a {
-            background-color: fuchsia;
-            color: gray;
-        }
-
-        #header div div a {
+        /* isso quer dizer que irá alterar a cor em todos os links do site */
+        a {
             color: blueviolet;
         } 
-        */
+        
+        /* isso irá fazer que ao passar o mouse sobre o link (logomarca) o link fique com a cor vermelha */
+        a:hover {
+            color: red;
+        }
 
-        /* se você especificar um atributo, logo na sequencia com mesmo seletor ou um seletor mais específico
-         * ele vai substituir o anterior. Ele não invalida. 
-         * No exempo acima a cor blueviolet substitui a cor cinza. 
+        /* isso irá fazer mudar o cor do link quando for clicado (somente na ação do clique) */
+        a:active {
+            color: greenyellow;
+        }
+
+        /* o focus com link não funciona muito bem, funciona melhor com input 
+         * isso irá fazer quando clicar no input para utilizá-lo a cor de borda do input fica azul
          */
+        input:focus {
+            color: blue;
+        }
+
+        /* quando um elemento dentro do div recebe o focus ele muda a cor da div inteira */
+        div:focus-within {
+            background-color: gray;
+        }
 
     </style>
 </head>
@@ -71,6 +44,8 @@
             <!-- o nome que você der ao id será único na página -->
             <!-- todo id que você quiser especificar, no css terá que colocar um hastag # -->
             <div><a href="" class="logomarca">logomarca</a></div> <!-- este é o seletor de id -->
+            <br>
+            <input type="text">
         </div>
     </header>
     <main id="content">
