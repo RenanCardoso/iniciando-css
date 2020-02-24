@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* margem interna */
+            padding: 10px;
+        }
+        /* classe de botão - setar comportamento padrão para a classe do botão*/
+        .btn {
+            text-decoration: none; /* fica sem o underline embaixo do texto */
+            background-color: #ecf0f1;
+            color: #7f8c8d;
+            /* margem(borda) interna, e margem para todos os lados do botão*/
+            padding: 10px 20px; /* o 10px é a borda de cima e de baixo, e o 20px a dos lados. */
+            /* para arredondar uma borda (deixar o botão redondinho) */
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-color: #dbdedff1;
+            /* se colocar só color irá alterar apenas a cor da fonte, ex:
+             * color: gray; 
+             */
+        }
+
+        /* com base nos seletores que você já conhece pode indicar um sub-seletor */
+        /* ao passar o mouse sobre o botão irá mudar a cor indicando que está selecionado 
+        .btn:hover {
+            background-color: #c04b3eec;
+        } 
+        */
+
+        /* os botões abaixo herdam as propriedades da classe .btn (classe pai) e aplicam as suas propriedades */
+        .btn.btn-red {
+            background-color: #c04b3eec;
+            color: #fff;
+        }
+
+        .btn-red:hover {
+            background-color: red;
+        }
+
+        .btn.btn-blue {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .btn-blue:hover {
+            background-color: #2980b9;
+        }
+
+        .btn.btn-green {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+
+        .btn-green:hover {
+            background-color: #16a085;
+        }
+
+        /* a gente personaliza os botões usando seletores de classe. */
+
+    </style>
+</head>
+<body>
+
+    <!-- a*4{item $} esse comando (emmet) irá fazer gerar quatro tags a com href conforme preenchido abaixo-->
+    <a href="" class="btn btn-red">item 1</a>
+    <a href="" class="btn btn-blue">item 2</a>
+    <a href="" class="btn btn-green">item 3</a>
+    <a href="" class="btn">item 4</a>
+
+</body>
+</html>
