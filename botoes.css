@@ -11,6 +11,10 @@ a[title="Meu logo"] {
 }
 
 a[class*="btn"] {  
+    /* se comporta não só como um elemento de linha, um link ou texto. Irá se comportar como um elemento de linha
+     * mas também como um bloco, como um div por exemplo. 
+     */
+    display: inline-block; /* o display inline significa que é um elemento que está em uma linha, ele segue a linha do texto. */
     text-decoration: none;  
     background-color: #ecf0f1;
     color: #7f8c8d;

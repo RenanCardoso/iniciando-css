@@ -29,3 +29,35 @@ body {
     /* font-weight: lighter; é a fonte fina(grossura).  */
 
 }
+/* pegar nossa classe .box e estilizá-la */
+.box {
+    background: white;
+    /* margem externa, para margem temos 4 possíveis valores. O primeiro é a margem superior(de cima), o segundo 
+     * é a margem esquerda, o terceiro é a margem inferior e por último a margem direita. Em ordem sentido horário
+     */
+    margin: 20px 60px 90px 120px;
+    /* margem interna, usar a mesma regra da margem externa, a diferença é o nome do atributo para padding. */
+    padding: 20px 60px 90px 120px;
+
+    /* borda */
+    border: 3px solid #000;
+
+    /* estilos de borda */
+    border-style: inset;
+    border-radius: 10vh;
+
+    /* em versões antigas de browsers o padding e border não aplicam se não tiver utilizando o display: inline-block */
+}    
+
+/* colocar todos os elementos dentro de display. */
+#display * {
+    display: inline;
+    /* sobre visibilidade, temos o atributo opacity, que tem valor de 0 a 1, sendo 0 = nada e 1 totalmente. */
+    opacity: 0.5; /* isso é a transparência do elemento. Se colocar 0 o elemento não será visível mas permanece lá*/
+    
+    /* temos também o visibility, funciona como o opacity porém não tem meio termo, ou mostra ou não mostra.*/
+    /* visibility: hidden; */
+
+    /* temos por último o próprio display. */
+    display: none; /* também irá ocultar o elemento, mas não como o opacity. Nesse caso ele oculta o elemento.*/
+}
