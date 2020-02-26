@@ -1,0 +1,31 @@
+/* link de fontes: https://fonts.google.com/ 
+ * A fonte padrão do windows é Times New Roman
+ */
+
+/* se remover o import ele para de funcionar, pois o import está importando os botões do arquivo
+ * botoes.css para esse arquivo que será utilizado no html. Basta apenas linkar o arquivo styles.css no html
+ */
+
+body {
+    padding: 10px;
+    background-color: #ccc;
+    /* alterar a fonte da página. Se a Arial não for encontrada usará a Helvetica, se a Helvetica
+     * não for encontrada usará a sans e assim por diante. Se não encontrar nenhuma usará a padrão. Times New Roman */
+    font-family: Montserrat, Helvetica, sans-serif;
+    /* font-family: Roboto, Helvetica, sans-serif; A fonte Roboto é usada no android. */
+
+    /* tamanho da fonte, pode ser em porcentagem, pixel, vh e etc... vh é um valor relativo ao tamanho da tela
+     * o vh é responsivo, ou seja, se adapta conforme o tamanho da tela (aumentando e diminuindo). O px e a
+     * porcentagem fica algo mais fixo.
+     */
+    /* font-size: 10vh;   */
+    font-size: 16px; /* o padrão em css é usar o tamanho em pixel. */
+
+    /* grossura da letra, padrão é 400. */
+    font-weight: 400; 
+    /* font-weight: bold; é negrito.  */
+    /* font-weight: inherit; é valor herdado.  */
+    /* font-weight: initial; é o valor inicial do navegador.  */
+    /* font-weight: lighter; é a fonte fina(grossura).  */
+
+}

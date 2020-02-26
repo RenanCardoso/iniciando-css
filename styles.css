@@ -1,0 +1,6 @@
+/* incluir caminho (pode ser um site, caminho de diretórios) até o seu arquivo css */
+/* para utilizar fontes externas */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@import "botoes.css";
+@import "geral.css";
