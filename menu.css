@@ -1,0 +1,37 @@
+/* a tag nav serve para criar links para o menu, que serão exibidos tipo um atalho desses links de menu caso seja pesquisado no google. */
+/* atributo nav com todos os elementos dentro. */
+
+nav, nav * {
+    border: none;
+    color: none;
+    margin: 0;
+    padding: 0;
+    /* estilo de lista. */
+    list-style: none;
+    /* tudo vai virar bloco. */
+    display: block;
+}
+
+/* todos os links que tiverem dentro de uma tag li vão ter um display inline:block. */
+nav ul li a {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    /* para tirar o sublinhado  */
+    text-decoration: none;
+    /* alinhar texto. */
+    text-align: center;
+}
+
+/* colocar um efeito. Ao passar o mouse sobre o botão irá ficar um pouco mais escuro e sublinhado.*/
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* para tirar o sublinhado  */
+    text-decoration: underline;
+}
+
+/* o elemento principal é o li. Usado para o menu horizontal. */
+nav.horizontal ul li {
+    display: inline-block;
+}

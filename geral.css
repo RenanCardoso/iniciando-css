@@ -47,6 +47,9 @@ body {
     border-radius: 10vh;
 
     /* em versões antigas de browsers o padding e border não aplicam se não tiver utilizando o display: inline-block */
+
+    /* é pra posicionar todos os elementos relativos a ele. */
+    position: relative;
 }    
 
 /* colocar todos os elementos dentro de display. */
@@ -60,4 +63,29 @@ body {
 
     /* temos por último o próprio display. */
     display: none; /* também irá ocultar o elemento, mas não como o opacity. Nesse caso ele oculta o elemento.*/
+}
+
+#modal {
+    /* irá posicionar o elemento de forma absoluta. Ele fica fixo no elemento, mesmo rolando a página. */
+    /* position: absolute; */
+
+    /* o posicionamento fixed funciona como o absoluto, só que ele ignora qualquer posicionamento relative
+     * e ele posiciona com base na janela que você está vendo e não no body. Se rolar a página ele segue junto.
+     */
+    position: fixed; /* serve pra criar menu hamburguer. (parecido com o menu do tempopush). */ 
+
+    /* posição encostada no topo. */
+    top: 0;
+
+    /* posição encostada a esquerda. */
+    left: 0;
+
+    /* setar tamanho para ele. */
+    width: 100px;
+
+    /* setar altura para ele. */
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, .7/*70% de vis*/); /* 1 é totalmente visível e 0 totalmente invisível (não tem cor). */ 
+    color: white /* cor do texto. */
 }
