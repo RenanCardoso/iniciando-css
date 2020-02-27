@@ -1,0 +1,38 @@
+/* primeira coisa a fazer é resetar o elemento. Essa prática se chama css reset, é muito utilizado para poder zerar
+ * todas as propriedades, em diferentes navegadores. Todos eles terão o mesmo comportamento.  
+ */
+
+
+/* para resetar o elemento basta tirar todas as propriedades padrão dele, conforme abaixo. */
+/* Resetar apenas os elementos que não estão sendo utilizados. */
+input[type="text"] {
+    background: #fff;
+    /* background: transparent; deixar o fundo invisível. */
+    border: 3px dashed teal;
+    /* border: none; tirar a borda. Zerar margens */
+    padding: 10px 20px;
+    width: 300px;
+    margin: 5px 0 10px 0; /* colocando borda apenas em baixo e em cima. */
+    color: #666;
+    display: block;
+    /* a linha azul que está sendo exibido sobre o input quando ele é clicado é chamada outline. 
+     * No firefox ela não é exibida. Ela funciona exatamente como borda.*/ 
+     outline: none; /* remover a borda azul. */
+    /* se você quiser que um elemento herde os valores das propriedades do elemento anterior. Colocar no reset CSS*/
+    font: inherit;
+    font-size: inherit;
+}
+
+/* Caso esteja utilizando alguma propriedade que está sendo utilizada, pode tirá-la do reset css. Por exemplo
+ * o margin no reset css está com margin: 0; e no estilizado acima está com margens customizadas, então não precisa 
+ * manter o margin 0 no reset css. Para que as propriedades não se sobrescrevam.  
+ */
+
+input[type="text"]:focus {
+    /* irá mudar a cor da borda somente após o usuário ter clicado no input. */
+    border: 3px dashed tomato;
+    /* tempo de transição. o "all" é para animar todas as propriedades dentro deste bloco css. O ease é o
+     * formato de animação que ele utiliza.
+     */
+     transition: all .5s ease;    
+}

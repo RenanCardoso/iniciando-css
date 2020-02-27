@@ -10,16 +10,48 @@ a[title="Meu logo"] {
     color: red;
 }
 
-a[class*="btn"] {  
+
+a[class*="btn"], .btn {  
     /* se comporta não só como um elemento de linha, um link ou texto. Irá se comportar como um elemento de linha
      * mas também como um bloco, como um div por exemplo. 
      */
-    display: inline-block; /* o display inline significa que é um elemento que está em uma linha, ele segue a linha do texto. */
+
+    /* o display inline significa que é um elemento que está em uma linha, ele segue a linha do texto. */
+    display: inline-block; 
     text-decoration: none;  
     background-color: #ecf0f1;
     color: #7f8c8d;
     padding: 10px 20px; 
     border-radius: 10px;
+    border: none; /* deixar o botão sem borda */
+    cursor: pointer; /* ficar como link clicável. */
+}
+/* podemos usar mais de um seletor css para um mesmo bloco css separando com vírgula, conforme feito acima. */
+
+
+
+/* para ficar mais genérico.  usado também para o arquivo form.html */
+/* .btn {  
+    /* se comporta não só como um elemento de linha, um link ou texto. Irá se comportar como um elemento de linha
+     * mas também como um bloco, como um div por exemplo. 
+
+    /* o display inline significa que é um elemento que está em uma linha, ele segue a linha do texto.
+    display: inline-block; 
+    text-decoration: none;  
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    padding: 10px 20px; 
+    border-radius: 10px;
+} 
+*/
+
+/* hover é para quando passar o mouse em cima. */
+a[class*="btn"]:hover, .btn:hover { 
+    /* tempo de transição. o "all" é para animar todas as propriedades dentro deste bloco css. O ease é o
+     * formato de animação que ele utiliza.
+     */
+     transition: all .5s ease;
+     /* quando passar o mouse a transição será mais suave.  */
 }
 
 .btn:hover {

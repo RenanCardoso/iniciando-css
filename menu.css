@@ -12,7 +12,7 @@ nav, nav * {
     display: block;
 }
 
-/* todos os links que tiverem dentro de uma tag li vão ter um display inline:block. */
+/* todos os links que tiverem dentro de uma tag li vão ter um display inline:block. Usado para o menu vertical. */
 nav ul li a {
     padding: 10px 20px;
     margin: 5px;
@@ -24,11 +24,14 @@ nav ul li a {
     text-align: center;
 }
 
-/* colocar um efeito. Ao passar o mouse sobre o botão irá ficar um pouco mais escuro e sublinhado.*/
+/* colocar um efeito no menu vertical e horizontal. 
+ * Ao passar o mouse sobre o botão irá ficar um pouco mais escuro e sublinhado.
+ */
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.7);
     /* para tirar o sublinhado  */
     text-decoration: underline;
+    transition: all .5s ease;    
 }
 
 /* o elemento principal é o li. Usado para o menu horizontal. */
